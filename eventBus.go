@@ -1,9 +1,10 @@
 package eventbus
 
-type (
-	Key      string
-	Priority uint8
-)
+type Key string
+
+func (k Key) String() string { return string(k) }
+
+type Priority uint8
 
 type Initializer interface {
 	Init() error
